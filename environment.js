@@ -1,1 +1,1 @@
-module.exports =  {to:{host:"172.25.194.204",port:3306},from:{port:80}}
+module.exports =  {to:{host:"phoenixtest.mysqldb.chinacloudapi.cn",port:3306},from:{port:80}}
