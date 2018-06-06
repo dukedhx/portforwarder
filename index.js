@@ -25,4 +25,4 @@ net.createServer(function(from) {
     });
     from.pipe(to);
     to.pipe(from);
-}).listen(process.env.PORT||(addr?addr.from[3]:environment.from.port), addr?addr.from[2]:environment.from.host);
+}).listen(process.env.PORT||(addr?addr.from[3]:environment.from.port));
