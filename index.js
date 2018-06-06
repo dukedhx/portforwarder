@@ -23,6 +23,9 @@ net.createServer(function(from) {
         host: addr?addr.to[2]:environment.to.host,
         port: addr?addr.to[3]:environment.to.port
     });
-    from.pipe(to);
-    to.pipe(from);
+    from.pipe(to).on('error', function (e) {
+console.log(e)
+});
+    to.pipe(from).on('error', function (e) {
+console.log(e)})
 }).listen(process.env.PORT||(addr?addr.from[3]:environment.from.port));
